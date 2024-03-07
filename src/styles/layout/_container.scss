@@ -1,0 +1,15 @@
+.container {
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header,
+section {
+    .container {
+        max-width: rem(80);
+        &.max {
+            max-width: rem(50);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/colors' as *;
+@use '../abstracts/media-query' as *;
+
+.demo {
+    margin: rem(2);
+    h1 {
+        font-size: rem(1.5);
+        padding-bottom: rem(1);
+        border-bottom: 1px solid $color-gray;
+    }
+    ul {
+        margin-top: rem(2);
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: rem(1);
+        @media (min-width: $from-small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: $from-large) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: $from-huge) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        a {
+            width: 100%;
+            text-align: center;
+            border: 1px solid $color-gray;
+            padding: rem(1.5);
+        }
+        p {
+            font-size: rem(0.9);
+            margin-top: rem(0.25);
+        }
+    }
+    img {
+        width: 100%;
+        border: 1px solid $color-gray;
+        margin-top: rem(1);
+    }
+    > a {
+        color: #0247e8;
+        margin-bottom: rem(1);
+    }
+}
